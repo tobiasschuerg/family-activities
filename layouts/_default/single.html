@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="container">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+    <div class="activity-info">
+        <p><strong>Dauer:</strong> {{ .Params.duration }}</p>
+        <p><strong>Saison:</strong> {{ .Params.season }}</p>
+        <p><strong>Preis:</strong> {{ .Params.price }}</p>
+        <p><strong>Webseite:</strong> <a href="{{ .Params.website }}">{{ .Params.website }}</a></p>
+        <p><strong>Altersgruppe:</strong> {{ .Params.age }}</p>
+        <p><strong>Stichwörter:</strong>
+            {{ range .Params.tags }}
+            <a href="/tags/{{ . | urlize }}"><span class="badge bg-primary">{{ . }}</span></a>
+            {{ end }}
+        </p>
+    </div>
+    {{ if ne (.Params.hints) "" }}
+    <div class="alert alert-info" role="alert">
+        <strong>Hinweis:</strong> {{ .Params.hints }}
+    </div>
+    {{ end }}
+    {{ if isset .Params "photos" }}
+    <h3>Fotos:</h3>
+    <div class="row">
+        {{ range .Params.photos }}
+        <div class="col-md-4">
+            <img src="{{ . }}" alt="Aktivitätsfoto" class="img-fluid" style="margin-bottom: 20px;">
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}

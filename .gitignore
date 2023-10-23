@@ -1,0 +1,6 @@
+# Hugo output directory
+/public/
+
+# Hugo generated files
+/resources/
+/cache/

@@ -1,0 +1,9 @@
+baseURL = 'http://example.org/'
+languageCode = 'de-de'
+title = 'Familienaktivitäten am Bodensee (Fokus Friedrichshafen)'
+
+theme = "activities"
+
+[params]
+  subtitle = "List of Activities Grouped into Categories"
+  author = "Tobias Schürg"

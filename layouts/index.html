@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<p>This page lists various activities grouped by their categories. Explore the exciting options below!</p>
+
+{{ range $key, $value := .Site.Taxonomies.categories }}
+    <h2>{{ $key }}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Season</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range $value.Pages }}
+                <tr>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ .Params.duration }}</td>
+                    <td>{{ .Params.season }}</td>
+                    <td>{{ .Params.price }}</td>
+                    <td>
+                        {{ range .Params.tags }}
+                            <a href="/tags/{{ . | urlize }}"><span class="badge bg-secondary">{{ . }}</span></a>
+                        {{ end }}
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+{{ end }}
+
+{{ end }}
