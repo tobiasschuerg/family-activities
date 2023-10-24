@@ -2,6 +2,7 @@
 title: "Links"
 date: 2023-10-24T18:26:23+02:00
 draft: true
+layout: default
 ---
 
 - [Ferienhof König: Ausflugsziele](https://www.ferienhofkoenig.de/blog/)

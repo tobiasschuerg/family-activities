@@ -3,8 +3,8 @@ title: "Räuber Kasimir Weg"
 date: 2023-10-22T22:10:04+02:00
 layout: activity
 duration: "2-3h"
-season: "Ganzjährig?"
-price: "0,5€"
+season: "ganzjährig?"
+price: "0,50€"
 website: "https://www.weiler-simmerberg.de/tourismus-freizeit/wandern/raeuber-kasimir-weg"
 age: ""
 categories:

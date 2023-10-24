@@ -1,16 +1,16 @@
 ---
 title: "Friedirchshafen: Spielplatz Austraße"
 date: 2023-10-22T10:00:00+08:00
-description: "Splielplatz in der Austraße Ailingen. Netter Spielplatz mit Sandkasten, Rutsche, (Baby-)Schaukel, Klettergerüst, Karussell, Tischtennisplatte und kleinen Fußballtoren. Ruhig gelegen und komplett umzäunt."
+layout: activity
 duration: "1h"
 season: "Ganzes Jahr"
 price: "-"
 website: "https://www.ailingen.de/unsere-ortschaft/ortsplan/einrichtungen-detail/fuid/4209/fcat/spiel-und-bolzplaetze-ailingen/facility/spielplatz-austrasse/"
 age: "0-12"
 tags: [Ailingen, Baby]
-hints: ""
+hints: []
 photos: []
 categories:
   - Spielplätze
 ---
-jsdfklsdjklfö
+Splielplatz in der Austraße Ailingen. Netter Spielplatz mit Sandkasten, Rutsche, (Baby-)Schaukel, Klettergerüst, Karussell, Tischtennisplatte und kleinen Fußballtoren. Ruhig gelegen und komplett umzäunt.

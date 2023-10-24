@@ -11,7 +11,7 @@ categories: [Ausflüge]
 tags:
   - spielplatz
 hints:
-  - schöner großer Spielplatz
+  - "schöner großer Spielplatz"
 photos: []
 kinderwagentauglich: ja
 ---

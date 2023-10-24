@@ -9,6 +9,6 @@ website: https://www.tourismus-langenargen.de/attraktionen/spielplatz-an-der-ufe
 age: ""
 categories: [spielplätze]
 tags: [Langenargen]
-hints: ""
+hints: []
 photos: []
 ---

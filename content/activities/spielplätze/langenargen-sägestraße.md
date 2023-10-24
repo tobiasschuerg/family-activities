@@ -9,6 +9,6 @@ website: https://www.tourismus-langenargen.de/attraktionen/spielplatz-saegestras
 age: ""
 categories: [todo]
 tags: []
-hints: ""
+hints: []
 photos: []
 ---
