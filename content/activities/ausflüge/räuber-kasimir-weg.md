@@ -1,13 +1,19 @@
 ---
 title: "Räuber Kasimir Weg"
 date: 2023-10-22T22:10:04+02:00
+layout: activity
 duration: "2-3h"
 season: "Ganzjährig?"
 price: "0,5€"
 website: "https://www.weiler-simmerberg.de/tourismus-freizeit/wandern/raeuber-kasimir-weg"
 age: ""
-categories: [todo]
-tags: [Kugelbahn]
+categories:
+  - wandern
+tags: 
+  - Kugelbahn
+  - Wandern
+  - Spielplatz
+  - Natur
 hints: 
   - Es gibt einen Kugelautomaten - 50ct
   - Der Anfang ist für Kinderwagen geeignet, der Rundweg im Wald nicht. Es gibt einen "Kinderwagenparkplatz". 

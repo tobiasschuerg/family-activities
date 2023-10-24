@@ -1,6 +1,7 @@
 ---
-title: "Fn Dornier Museum"
-date: 2023-10-22T21:55:14+02:00
+title: Schaffhausen Rheinfall
+date: 2023-10-24T18:29:06+02:00
+layout: activity
 duration: ""
 season: ""
 price: ""

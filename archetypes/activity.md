@@ -1,13 +1,18 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
-duration: ""
-season: ""
-price: ""
-website: ""
-age: ""
-categories: [todo]
-tags: []
-hints: ""
+layout: activity
+duration:
+season:
+price:
+website: 
+age:
+categories:
+  - todo
+tags:
+  -
+hints:
+  -
 photos: []
+kinderwagentauglich: "?"
 ---

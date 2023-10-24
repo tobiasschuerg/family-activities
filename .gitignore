@@ -4,3 +4,5 @@
 # Hugo generated files
 /resources/
 /cache/
+
+/venv/
