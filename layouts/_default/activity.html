@@ -1,33 +1,58 @@
 {{ define "main" }}
 <div class="container">
     <h1>{{ .Title }}</h1>
-    <p>{{ .Content }}</p>
-    <div class="activity-info">
-        <p><strong>Dauer:</strong> {{ .Params.duration }}</p>
-        <p><strong>Saison:</strong> {{ .Params.season }}</p>
-        <p><strong>Preis:</strong> {{ .Params.price }}</p>
-        <p><strong>Webseite:</strong> <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
-        <p><strong>Altersgruppe:</strong> {{ .Params.age }}</p>
-        <p><strong>Stichwörter:</strong>
-            {{ range .Params.tags }}
-            <a href="/tags/{{ . | urlize }}"><span class="badge bg-primary">{{ . }}</span></a>
-            {{ end }}
-        </p>
-    </div>
-    {{ if and (isset .Params "hints") (gt (len .Params.hints) 0) }}
-    <div class="alert alert-info" role="alert">
-        <strong>Hinweis:</strong>
-        {{ range .Params.hints }}
-        <div>{{ . }}</div>
-        {{ end }}
-    </div>
-    {{ end }}
-
-    {{ if and (isset .Params "photos") (gt (len .Params.photos) 0) }}
-    <h3>Fotos:</h3>
     <div class="row">
+        <div class="col-md-6">
+            <p>{{ .Content }}</p>
+
+            {{ if and (isset .Params "hints") (gt (len .Params.hints) 0) }}
+            <div class="alert alert-info" role="alert">
+                <strong>Hinweis:</strong>
+                <ul>
+                    {{ range .Params.hints }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            
+            {{ if and (isset .Params "warnings") (gt (len .Params.warnings) 0) }}
+            <div class="alert alert-warning" role="alert">
+                <strong>Achtung:</strong>
+                <ul>
+                    {{ range .Params.warnings }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="activity-info">
+                <p><strong>Dauer:</strong> {{ .Params.duration }}</p>
+                <p><strong>Saison:</strong> {{ .Params.season }}</p>
+                <p><strong>Preis:</strong> {{ .Params.price }}</p>
+                <p><strong>Webseite:</strong> <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a>
+                </p>
+                <p><strong>Altersgruppe:</strong> {{ .Params.age }}</p>
+                <p><strong>Stichwörter:</strong>
+                    {{ range .Params.tags }}
+                    <a href="/tags/{{ . | urlize }}"><span class="badge bg-primary">{{ . }}</span></a>
+                    {{ end }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{ if and (isset .Params "photos") (gt (len .Params.photos) 0) }}
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Fotos:</h3>
+        </div>
         {{ range .Params.photos }}
-        <div class="col-md-4">
+        <div class="col-md-3">
             <img src="{{ . }}" alt="Aktivitätsfoto" class="img-fluid" style="margin-bottom: 20px;">
         </div>
         {{ end }}

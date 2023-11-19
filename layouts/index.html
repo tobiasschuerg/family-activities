@@ -3,7 +3,7 @@
 <p>This page lists various activities grouped by their categories. Explore the exciting options below!</p>
 
 {{ range $key, $value := .Site.Taxonomies.categories }}
-    <h2>{{ $key }}</h2>
+    <h2 class="text-capitalize">{{ $key }}</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -15,7 +15,7 @@
                     <th scope="col">Tags</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="hover-highlight-row">
                 {{ range $value.Pages }}
                 <tr>
                     <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>

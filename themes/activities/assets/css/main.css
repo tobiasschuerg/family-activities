@@ -7,3 +7,7 @@
 .hint-box {
     margin: 20px 0;
 }
+
+.hover-highlight-row tr:hover {
+    background-color: rgb(224, 252, 179);
+}

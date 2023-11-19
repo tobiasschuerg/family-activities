@@ -7,7 +7,7 @@ season: "Ganzjährig"
 price: "-"
 website: "https://maps.app.goo.gl/yGUZEXtRVczAuVWe7"
 age: "0-10"
-categories: [todo]
+categories: [Spielplätze]
 tags: [apfel]
 hints: ""
 photos: []
