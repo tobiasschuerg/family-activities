@@ -1,43 +1,43 @@
 {{ define "main" }}
 
-<p>This page lists various activities grouped by their categories. Explore the exciting options below!</p>
+<p>Diese Übersicht listet verschiedene Aktivitäten (am Bodensee, mit Fokus auf Friedirchshafen) nach Kategorien gruppiert auf.
+    Diese Liste dient in erster Linie der persönlichen Nachverfolgung von Aktivitäten, aber Vorschläge sind immer willkommen.</p>
 
 {{ range $key, $value := .Site.Taxonomies.categories }}
-<h2 class="text-capitalize">{{ $key }}</h2>
-<div class="table-responsive">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Duration</th>
-                <th scope="col">Season</th>
-                <th scope="col">Price</th>
-                <th scope="col">Tags</th>
-                <th scope="col">Distance</th>
-            </tr>
-        </thead>
-        <tbody class="hover-highlight-row">
-            {{ range $value.Pages }}
-            <tr>
-                <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
-                <td>{{ .Params.duration }}</td>
-                <td>{{ .Params.season }}</td>
-                <td>{{ .Params.price }}</td>
-                <td>
-                    {{ range .Params.tags }}
-                    <a href="/tags/{{ . | urlize }}"><span class="badge bg-secondary">{{ . }}</span></a>
-                    {{ end }}
-                </td>
-                <td>
-                    <span class="distance" data-lat="{{ .Params.latitude }}" data-lon="{{ .Params.longitude }}"></span>
-                    <span class="warning-sign d-none" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Latitude or longitude not set">⚠️</span>
-                </td>
-            </tr>
-            {{ end }}
-        </tbody>
-    </table>
-</div>
+    <h2 class="text-capitalize">{{ $key }}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Dauer</th>
+                    <th scope="col">Saison</th>
+                    <th scope="col">Preis</th>
+                    <th scope="col">Tags</th>
+                    <th scope="col">Entfernung</th>
+                </tr>
+            </thead>
+            <tbody class="hover-highlight-row">
+                {{ range $value.Pages }}
+                <tr>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>{{ .Params.duration }}</td>
+                    <td>{{ .Params.season }}</td>
+                    <td>{{ .Params.price }}</td>
+                    <td>
+                        {{ range .Params.tags }}
+                            <a href="/tags/{{ . | urlize }}"><span class="badge bg-secondary">{{ . }}</span></a>
+                        {{ end }}
+                    </td>
+                    <td>
+                        <span class="distance" data-lat="{{ .Params.latitude }}" data-lon="{{ .Params.longitude }}"></span>
+                        <span class="warning-sign d-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Latitude or longitude not set">⚠️</span>
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
 {{ end }}
 
 {{ end }}

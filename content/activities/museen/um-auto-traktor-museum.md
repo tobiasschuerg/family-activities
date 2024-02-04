@@ -12,5 +12,7 @@ tags: [Traktor, Restaurant]
 hints: 
   - "Tendenziell eher für Ältere, da die Ausstellungsstücke nur zum anschauen geadcht sind. In der großen Ausstellung im Untergeschoss gibt es allerdings einige Traktor-Rutschautos für die Kleinen."
 photos: []
+latitude: 47.7293338806477
+longitude: 9.257002947921427
 ---
 Nostalgischer Bauernhof mit mehr als 350 Traktoren, Autos und Motorrädern sowie einem guten Restaurant mit Außenbereich.
