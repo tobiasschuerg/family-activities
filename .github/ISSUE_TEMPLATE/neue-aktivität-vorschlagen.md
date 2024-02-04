@@ -1,13 +1,13 @@
 ---
 name: Neue Aktivität Vorschlagen
 about: Bitte beschreibe diese Aktivität und nenne wenn möglich weitere Angaben
-title: ''
-labels: ''
-assignees: ''
+title: Titel für Aktivität
+labels: Neue Aktivität
+assignees: tobiasschuerg
 
 ---
 
-### Titel
+### Website
 [...]
 
 ### Dauer
@@ -17,9 +17,6 @@ assignees: ''
 [...]
 
 ### Preis
-[...]
-
-### Website
 [...]
 
 ### Altersempfehlung
