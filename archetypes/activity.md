@@ -13,6 +13,10 @@ tags:
   -
 hints:
   -
+warnings:
+  -
 photos: []
 kinderwagentauglich: "?"
+latitude: 
+longitude: 
 ---

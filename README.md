@@ -1,5 +1,7 @@
 # Familienaktivitäten in und um Friedirchshafen
 
+[ÖFFNEN](https://tobiasschuerg.github.io/family-activities/)
+
 ## Start
 ```sh
 hugo server
@@ -7,11 +9,5 @@ hugo server
 
 ## Neuen Content erzeugen
 ```sh
-hugo new content --kind activity schwimmen/fn-sportbad  
+hugo new content --kind activity parks/fn-name  
 ```
-
-
-## TODO:
- - flag für Kinderwagentauglich
- - Array für Hints
- - Zusätzlich Achtung?
