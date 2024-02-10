@@ -32,7 +32,7 @@
                 <td>{{ .Params.price }}</td>
                 <td>
                     {{ range .Params.tags }}
-                    <a href="/tags/{{ . | urlize }}"><span class="badge bg-secondary">{{ . }}</span></a>
+                    <a href="tags/{{ . | urlize }}"><span class="badge bg-secondary">{{ . }}</span></a>
                     {{ end }}
                 </td>
                 <td>
