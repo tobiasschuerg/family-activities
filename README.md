@@ -1,6 +1,8 @@
-# Familienaktivitäten in und um Friedirchshafen
+# Familienaktivitäten in und um Friedrichshafen
 
-[ÖFFNEN](https://tobiasschuerg.github.io/family-activities/)
+Persönliche Sammlung von Aktivitäten am Bodensee.
+
+[ALS WEBSEITE ÖFFNEN](https://tobiasschuerg.github.io/family-activities/)
 
 ## Start
 ```sh
