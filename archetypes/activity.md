@@ -13,8 +13,7 @@ tags:
   -
 hints:
   -
-warnings:
-  -
+warnings: []
 photos: []
 kinderwagentauglich: "?"
 latitude: 

@@ -8,6 +8,7 @@ hugo server
 ```
 
 ## Neuen Content erzeugen
+Beispiel:
 ```sh
-hugo new content --kind activity parks/fn-name  
+hugo new content --kind activity activities/parks/scheidegg-skywalk.md
 ```
