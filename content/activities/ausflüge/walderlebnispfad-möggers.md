@@ -4,7 +4,7 @@ date: 2024-07-07T10:33:28+02:00
 layout: activity
 duration: 2-4h
 season: Ganzjährig?
-price: Spendenbox
+price: Spendenbox (2€)
 website: https://www.walderlebnispfad.at
 age: 2+
 categories:
