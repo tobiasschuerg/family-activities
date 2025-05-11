@@ -15,6 +15,10 @@ website: "https://www.spieleland.de"
 photos: []
 hints: 
   - "Außerhalb des Sommers nur Do-So geöffnet"
+warnings:
+  - "Am Wochenende und in den Ferien sehr gut besucht"
+latitude: 47.710481125376766
+longitude: 9.595947560919289
 ---
 
 Das Ravensburger Spieleland ist ein Freizeitpark für Familien mit Kindern bei Ravensburg. Es gibt viele verschiedene Attraktionen, und Fahrgeschäfte. Besondere Schwerpunkte des Parks sind Spiele und Aktivitäten, die auf den beliebten Ravensburger Marken basieren und sich an Kinder im Vorschul- und Grundschulalter richten.
