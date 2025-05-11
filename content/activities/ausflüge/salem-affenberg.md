@@ -1,24 +1,44 @@
 ---
-title: Salem Affenberg
+title: Affenberg Salem
 date: 2023-10-24T18:48:12+02:00
 layout: activity
 duration: "2-3h"
-season: "März bis Oktober"
-price: "12,50€"
+season: "Mitte März bis Anfang November"
+price: "Erwachsene 12€, Kinder (5-15 J.) 8€"
 website: "https://www.affenberg-salem.de"
-age: "0-99"
-categories: [Parks, Spielplätze]
-tags: [Tiere, Affen, Salem, Spielplatz, Kinderwagentauglich]
+age: "Kleinkind Kind"
+categories:
+  - ausflüge
+tags:
+  - Tiere
+  - Affen
+  - Salem
+  - Bodensee
+  - Freigehege
 hints:
-  - Abendteuerspielplatz und Biergarten befinden sich vor dem Park und sind ohne Eintritt erreichbar.
+  - "Treewalk (Baumwipfelpfad) optional für 5€ pro Person (ab 5 Jahre)"
+  - "Abenteuerspielplatz und Biergarten vor dem Park ohne Eintritt nutzbar"
+  - "Kostenlose Parkplätze"
 warnings:
-  -  Im Sommer und an Wochenenden viel los
+  - "Im Sommer und an Wochenenden sehr gut besucht"
+  - "Hunde sind im Park nicht erlaubt"
 photos: []
+kinderwagentauglich: "Ja"
+latitude: 47.7813
+longitude: 9.2343
 ---
-Schöner Tierpark mit etwa 200 Berberaffen, der größten Storchenkolonie Süddeutschlands und etwas Dammwild. Mehrmals am Tag gibt es moderierte Fütterungen. Selbst zu füttern ist eider nicht mehr erlaubt. Außerdem gibt es einen "Tree-Walk" der ist aber erst ab 6 Jahre und kostet extra.
 
-Der Affenberg selbst ist mit seinem 1,5km langem Rundweg (zumindest mit kleinen Kindern) eher kurzweilig, für ältere Kinder gibt es eine Schniteljagd(-App) und extra Programm.
+Der Affenberg Salem ist ein einzigartiges Ausflugsziel am Bodensee mit knapp 200 Berberaffen, die in einem 20 Hektar großen Wald wie in freier Wildbahn leben. Der 1,5 km lange Rundweg führt durch das Freigehege und bietet Besuchern die Möglichkeit, die Affen aus nächster Nähe zu beobachten.
 
-Außerhalb des Tierparks liegt außerdem ein schöner großer Abendteuerspielplatz und Biergarten mit akzeptablen Preisen.
+## Highlights
 
-Kostenlose Parkplätze vor dem Park.
+- **Berberaffen im Freigehege**: Die größte freilebende Berberaffenkolonie außerhalb Nordafrikas in einem naturnahen Lebensraum
+- **Moderierte Fütterungen**: Mehrmals täglich finden informative Fütterungen statt, bei denen Besucher mehr über die Tiere erfahren
+- **Größte Storchenkolonie Süddeutschlands**: Zahlreiche frei fliegende Störche nisten auf dem Gelände
+- **Damwildherde**: Auch eine Gruppe Damwild kann im Park beobachtet werden
+- **Storchenweiher**: Ein Wasservogel-Paradies mit großen Karpfen
+- **Treewalk** (optional): Ein 250m langer Baumwipfelpfad in 12m Höhe ermöglicht einen besonderen Blick auf die Affen (ab 5 Jahren, Aufpreis 5€)
+
+Für Kinder gibt es eine Schnitzeljagd-App und spezielles Programm. Der Besuch dauert typischerweise 2-3 Stunden, wobei die Führung selbst etwa eine Stunde in Anspruch nimmt.
+
+Außerhalb des Parks befindet sich der Abenteuerspielplatz "Kleiner Ranger" mit angrenzendem Biergarten "Affenberg-Schenke", der auch ohne Parkeintritt besucht werden kann.
