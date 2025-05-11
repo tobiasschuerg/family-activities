@@ -18,7 +18,8 @@ tags:
 hints:
   - "Treewalk (Baumwipfelpfad) optional für 5€ pro Person (ab 5 Jahre)"
   - "Abenteuerspielplatz und Biergarten vor dem Park ohne Eintritt nutzbar"
-  - "Kostenlose Parkplätze"
+  - "Nur Kartenzahlung möglich"
+  - "Kostenlose Parkplätze vorhanden"
 warnings:
   - "Im Sommer und an Wochenenden sehr gut besucht"
   - "Hunde sind im Park nicht erlaubt"
