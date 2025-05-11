@@ -1,31 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Document loaded");
-    // Check if geolocation is supported by the browser
-    if ("geolocation" in navigator) {
-        console.log("Geolocation is supported");
-        // Request the user's location
-        navigator.geolocation.getCurrentPosition(
-            function (position) {
-                console.log("User's location obtained successfully");
-                const userLat = position.coords.latitude;
-                const userLon = position.coords.longitude;
-
-                // Call the function to calculate distances
-                calculateDistances(userLat, userLon);
-            },
-            function (error) {
-                // Error handling
-                console.error("Error getting user's location:", error);
-                // Set distances to a unicode sign in case of error
-                setIndeterminateDistance();
-            }
-        );
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-        // Set distances to a unicode sign if geolocation is not supported
-        setIndeterminateDistance();
-    }
-
+    
     // Initialize tooltips for warning signs
     const warningSigns = document.querySelectorAll(".warning-sign");
     warningSigns.forEach(function (sign) {
@@ -34,7 +9,98 @@ document.addEventListener("DOMContentLoaded", function () {
         sign.setAttribute("title", "Latitude or longitude not set");
         new bootstrap.Tooltip(sign);
     });
+
+    // Create location permission banner if needed
+    createLocationBannerIfNeeded();
+    
+    // Check if geolocation is supported by the browser
+    if ("geolocation" in navigator) {
+        console.log("Geolocation is supported");
+        
+        // Check if we've already asked for permission
+        const locationPermission = localStorage.getItem("locationPermission");
+        
+        if (locationPermission === "granted") {
+            // Permission was previously granted, request location
+            requestLocation();
+        } else if (locationPermission === "denied") {
+            // Permission was previously denied, show banner
+            showLocationBanner();
+            setIndeterminateDistance();
+        } else {
+            // First time asking for permission
+            requestLocation();
+        }
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+        // Set distances to a unicode sign if geolocation is not supported
+        setIndeterminateDistance();
+    }
 });
+
+// Function to request location
+function requestLocation() {
+    navigator.geolocation.getCurrentPosition(
+        function (position) {
+            console.log("User's location obtained successfully");
+            // Store that permission was granted
+            localStorage.setItem("locationPermission", "granted");
+            
+            // Hide banner if it exists
+            hideLocationBanner();
+            
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
+
+            // Call the function to calculate distances
+            calculateDistances(userLat, userLon);
+        },
+        function (error) {
+            // Error handling
+            console.error("Error getting user's location:", error);
+            
+            // Store that permission was denied
+            localStorage.setItem("locationPermission", "denied");
+            
+            // Show the banner
+            showLocationBanner();
+            
+            // Set distances to a unicode sign in case of error
+            setIndeterminateDistance();
+        }
+    );
+}
+
+// Function to create location permission banner
+function createLocationBannerIfNeeded() {
+    if (!document.getElementById('locationBanner')) {
+        const banner = document.createElement('div');
+        banner.id = 'locationBanner';
+        banner.className = 'alert alert-warning alert-dismissible fade show d-none';
+        banner.setAttribute('role', 'alert');
+        banner.style.position = 'fixed';
+        banner.style.top = '0';
+        banner.style.left = '0';
+        banner.style.right = '0';
+        banner.style.zIndex = '1050';
+        
+        banner.innerHTML = `
+            <strong>Standort nicht verfügbar</strong> - Für die Berechnung der Entfernungen wird dein Standort benötigt.
+            <button type="button" class="btn btn-sm btn-primary ms-2" id="requestLocationBtn">Standort freigeben</button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        document.body.prepend(banner);
+        
+        // Add event listener to the request location button
+        document.getElementById('requestLocationBtn').addEventListener('click', function() {
+            // Clear the stored permission
+            localStorage.removeItem("locationPermission");
+            // Request location again
+            requestLocation();
+        });
+    }
+}
 
 function calculateDistances(userLat, userLon) {
     console.log("Calculating distances...");
@@ -80,4 +146,20 @@ function setIndeterminateDistance() {
     distanceElements.forEach(function (element) {
         element.textContent = "\u26A0"; // Unicode for '⚠' sign
     });
+}
+
+// Function to show location banner
+function showLocationBanner() {
+    const banner = document.getElementById('locationBanner');
+    if (banner) {
+        banner.classList.remove('d-none');
+    }
+}
+
+// Function to hide location banner
+function hideLocationBanner() {
+    const banner = document.getElementById('locationBanner');
+    if (banner) {
+        banner.classList.add('d-none');
+    }
 }
