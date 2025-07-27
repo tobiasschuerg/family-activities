@@ -24,7 +24,7 @@
             </tr>
         </thead>
         <tbody class="hover-highlight-row">
-            {{ range $value.Pages }}
+            {{ range $value.Pages.ByTitle }}
             <tr>
                 <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
                 <td>{{ .Params.duration }}</td>
