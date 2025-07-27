@@ -9,15 +9,14 @@ website: https://www.tourismus-langenargen.de/attraktionen/spielplatz-saegestras
 age: "Kinder"
 categories:
   - spielplätze
-  - langenargen
   - ausflüge
-  
 tags:
   - Spielplatz
   - Rutsche
   - Sand
   - Trampolin
   - Schaukel
+  - Langenargen
 hints: []
 photos: []
 kinderwagentauglich: "Ja"
