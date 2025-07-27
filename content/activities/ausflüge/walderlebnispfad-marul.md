@@ -9,6 +9,7 @@ website: "https://www.vorarlberg.travel/route/walderlebnispfad-marul-4/"
 age: "Kleinkind Kind"
 categories:
   - ausflüge
+  - todo
 tags:
   - Wandern
   - Erlebnispfad

@@ -9,6 +9,7 @@ website: https://appenzellerland.ch/de/erleben/wandern-bewegen/sommer/wanderrout
 age: alle
 categories:
   - Ausflüge
+  - todo
 tags:
   - Wandern
   - Rundfahrt

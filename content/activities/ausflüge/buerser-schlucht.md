@@ -1,5 +1,5 @@
 ---
-title: "Bürser Schlucht"
+title: "Buerser Schlucht"
 date: 2025-07-28T12:00:00+02:00
 layout: activity
 duration: "2h"
