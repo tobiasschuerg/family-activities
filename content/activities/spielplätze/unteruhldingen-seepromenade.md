@@ -1,5 +1,5 @@
 ---
-title: "Uhldingen: Kinderspielplatz Strandpromenade"
+title: "Uhldingen: Spielplatz Strandpromenade"
 date: 2023-10-22T10:00:00+08:00
 layout: activity
 duration: "2h"

@@ -1,5 +1,5 @@
 ---
-title: "Langenargen Sägestraße"
+title: "Langenargen: Spielplatz Sägestraße"
 date: 2023-10-24T00:14:32+02:00
 layout: activity
 duration: "1-2 Stunden"

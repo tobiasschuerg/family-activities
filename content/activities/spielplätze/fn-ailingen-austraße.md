@@ -12,5 +12,7 @@ hints: []
 photos: []
 categories:
   - Spielplätze
+latitude: 47.68542811345246
+longitude: 9.489282202080764
 ---
 Splielplatz in der Austraße Ailingen. Netter Spielplatz mit Sandkasten, Rutsche, (Baby-)Schaukel, Klettergerüst, Karussell, Tischtennisplatte und kleinen Fußballtoren. Ruhig gelegen und komplett umzäunt.
