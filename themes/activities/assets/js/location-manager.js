@@ -10,6 +10,8 @@ class LocationManager {
     }
 
     init() {
+        console.log("LocationManager initializing...");
+        
         if (!("geolocation" in navigator)) {
             console.log("Geolocation is not supported by this browser.");
             this.setIndeterminateDistance();
@@ -17,25 +19,47 @@ class LocationManager {
         }
 
         console.log("Geolocation is supported");
-        this.checkLocationStatus();
+        setTimeout(() => {
+            this.checkLocationStatus();
+        }, 100);
     }
 
     checkLocationStatus() {
+        console.log("Checking location status...");
         const locationPermission = localStorage.getItem("locationPermission");
         const lastLocationRequest = localStorage.getItem("lastLocationRequest");
         const bannerDismissed = localStorage.getItem("locationBannerDismissed");
+        const cachedLocation = localStorage.getItem("cachedLocation");
 
         console.log("Stored location permission:", locationPermission);
         console.log("Last location request:", lastLocationRequest);
         console.log("Banner dismissed:", bannerDismissed);
-        console.log("Browser:", navigator.userAgent.includes('Vivaldi') ? 'Vivaldi' : 'Other');
+        console.log("Cached location:", cachedLocation);
 
-        const shouldShowBanner = !bannerDismissed || 
-            (this.currentTime - parseInt(bannerDismissed) > this.twentyFourHours);
+        const banner = document.getElementById('locationBanner');
+        console.log("Banner element found:", !!banner);
+        
+        // Check if we have recent successful location grant
+        const hasRecentLocationGrant = locationPermission === "granted" && lastLocationRequest && 
+            (this.currentTime - parseInt(lastLocationRequest) < this.twentyFourHours);
+        
+        // Check if banner was recently dismissed
+        const bannerRecentlyDismissed = bannerDismissed && 
+            (this.currentTime - parseInt(bannerDismissed) < this.twentyFourHours);
 
-        if (locationPermission === "denied" || !shouldShowBanner) {
-            console.log("Not showing banner - either denied or recently dismissed");
+        console.log("Has recent location grant:", hasRecentLocationGrant);
+        console.log("Banner recently dismissed:", bannerRecentlyDismissed);
+
+        if (locationPermission === "denied" || bannerRecentlyDismissed) {
+            console.log("Not showing banner - denied or recently dismissed");
             this.setIndeterminateDistance();
+        } else if (hasRecentLocationGrant && cachedLocation) {
+            console.log("Using cached location - no need to request again");
+            const location = JSON.parse(cachedLocation);
+            this.calculateDistances(location.lat, location.lon);
+        } else if (hasRecentLocationGrant) {
+            console.log("Using recent location grant - requesting location");
+            this.requestLocation();
         } else {
             console.log("Showing banner for location request");
             this.showLocationBanner();
@@ -44,6 +68,9 @@ class LocationManager {
     }
 
     requestLocation() {
+        console.log("Requesting location...");
+        this.setLoadingDistance();
+        
         navigator.geolocation.getCurrentPosition(
             (position) => this.onLocationSuccess(position),
             (error) => this.onLocationError(error),
@@ -60,11 +87,19 @@ class LocationManager {
         localStorage.setItem("locationPermission", "granted");
         localStorage.setItem("lastLocationRequest", Date.now().toString());
         
-        this.hideLocationBanner();
-        
         const userLat = position.coords.latitude;
         const userLon = position.coords.longitude;
         
+        // Cache the location for future use
+        const locationData = {
+            lat: userLat,
+            lon: userLon,
+            timestamp: Date.now()
+        };
+        localStorage.setItem("cachedLocation", JSON.stringify(locationData));
+        console.log("Location cached for future use");
+        
+        this.hideLocationBanner();
         this.calculateDistances(userLat, userLon);
     }
 
@@ -118,15 +153,29 @@ class LocationManager {
     setIndeterminateDistance() {
         console.log("Setting indeterminate distances");
         const distanceElements = document.querySelectorAll(".distance");
-        distanceElements.forEach((element) => {
+        console.log("Found distance elements:", distanceElements.length);
+        distanceElements.forEach((element, index) => {
+            console.log(`Setting warning for element ${index}`);
             element.textContent = "\u26A0"; // Unicode for '⚠' sign
         });
     }
 
+    setLoadingDistance() {
+        console.log("Setting loading spinners");
+        const distanceElements = document.querySelectorAll(".distance");
+        distanceElements.forEach((element) => {
+            element.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-label="Loading"></span>';
+        });
+    }
+
     showLocationBanner() {
+        console.log("Attempting to show location banner");
         const banner = document.getElementById('locationBanner');
         if (banner) {
+            console.log("Banner found, removing d-none class");
             banner.classList.remove('d-none');
+        } else {
+            console.error("Banner element not found!");
         }
     }
 
