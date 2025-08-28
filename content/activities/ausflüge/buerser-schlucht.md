@@ -9,7 +9,6 @@ website: "https://www.vorarlberg.travel/route/buerser-schlucht-am-eingang-des-br
 age: "Kind Jugendliche"
 categories:
   - ausflüge
-  - todo
 tags:
   - Schlucht
   - Natur
