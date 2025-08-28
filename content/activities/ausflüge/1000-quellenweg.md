@@ -8,8 +8,8 @@ price: "kostenlos"
 website: "https://www.bodenseeferien.de/freizeit/wandern-am-bodensee/1000-quellenweg-wandern-stockach-art-1247"
 age: "ab ca. 3 Jahren"
 categories:
-  - ausflüge
   - wandern
+  - todo
 tags:
   - themenweg
   - natur
