@@ -1,6 +1,6 @@
 ---
 title: "1000 Quellenweg"
-date: 2025-08-29
+date: 2025-08-28
 layout: activity
 duration: "ca. 2-3 Stunden"
 season: "Frühjahr bis Herbst"
