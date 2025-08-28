@@ -17,7 +17,7 @@ tags:
   - vorarlberg
 hints:
   - Feste Schuhe empfohlen, da der Weg stellenweise steinig und rutschig ist.
-  - Kombinierbar mit Karrenbahn.
+  - Kombinierbar mit Karrenbahn. Alplochkarte inkludiert Bergfahrt mit der Seilbahn, Wanderung zum Staufensee und durchs Alploch, sowie die Busfahrt retour.
 warnings: []
 photos: []
 kinderwagentauglich: "nein"
